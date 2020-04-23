@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <inttypes.h>
 #include <string.h>
-#include "blake256.h"
+#include "blake2-int.h"
 
 int main(void)
 {
@@ -19,12 +19,7 @@ int main(void)
     }
 
     for (size_t i = 0; i < 256; i++) {
-        blake256_hash(r, m, i);
-        blake224_hash(r, m, i);
-    }
-    for (size_t i = 0; i < 64; i++) {
-        hmac_blake256_hash(r, k, i, m, i);
-        hmac_blake224_hash(r, k, i, m, i);
+        blake2s(r, m, k, 64, i, 64);
     }
     return 0;
 }
