@@ -8,4 +8,4 @@ u: c
 c:
 	rm -rf *.o *.out
 
-# tis-interpreter.sh --cc "-DHAVE_BLAKE2B -DHAVE_BLAKE2 -DSINGLE_THREADED -I. -I wolfssl/wolfcrypt" blake2s/*.c
+# tis-interpreter.sh --cc "-DHAVE_BLAKE2B -DHAVE_BLAKE2 -DSINGLE_THREADED -I. -I wolfssl/wolfcrypt" blake2b/*.c

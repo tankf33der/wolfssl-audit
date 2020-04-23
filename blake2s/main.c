@@ -8,7 +8,7 @@
 int main(void)
 {
     printf("start\n");
-    uint8_t r[32];
+    uint8_t r[64];
     uint8_t k[64];
     uint8_t m[256];
     for (size_t i = 0; i < 256; i++) {
