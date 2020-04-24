@@ -3,20 +3,19 @@
 #include <stdint.h>
 #include <string.h>
 
+void *memset(void *dst, int c, size_t n)
+ {
+     if (n) {
+         char *d = dst;
+ 
+         do {
+             *d++ = c;
+         } while (--n);
+     }
+     return dst;
+ }
 
-void *
-memset(void *__s, int __c, size_t __n)
-{
-
-    if (__n != 0) {
-        char *d = __s;
-
-        do {
-            *d++ = __c;
-        } while (--__n != 0);
-    }
-    return (__s);
-}
+ 
 void *memcpy(void *__restrict __dest, const void *__restrict __src, size_t __n)
 {
    char *csrc = (char *)__src;
