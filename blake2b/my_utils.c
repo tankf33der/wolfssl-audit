@@ -5,7 +5,7 @@
 
 
 void *
-memset(void *__s, int __c, size_t __n)
+memset(void *s, int c, size_t n)
 {
 /*
     if (__n != 0) {
