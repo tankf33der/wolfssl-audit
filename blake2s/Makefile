@@ -14,5 +14,5 @@ i: mike
 c:
 	rm -rf *.o *.out mike.*
 
-# tis-interpreter.sh --cc "-DWOLFSSL_SMALL_STACK -DHAVE_BLAKE2S -DSINGLE_THREADED -I. -I wolfssl/wolfcrypt" blake2s/*.c
+# tis-interpreter.sh --cc "-DHAVE_BLAKE2S -DSINGLE_THREADED -I. -I wolfssl/wolfcrypt" blake2s/*.c
 
