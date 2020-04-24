@@ -21,13 +21,12 @@ int main(void)
     for (size_t i = 0; i < 256; i++) {
         blake2s(r, m, k, 32, i, 32);
     }
-/*
+
     for (size_t i = 0; i < 32; i++) {
         blake2s(r, m, k, 32, 32, i);
     }
     for (size_t i = 0; i < 32; i++) {
         blake2s(r, m, k, i, 32, 32);
     }
-*/
     return 0;
 }
