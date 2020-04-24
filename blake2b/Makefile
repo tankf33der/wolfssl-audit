@@ -8,10 +8,10 @@ u: c
 mike: c
 	cat *.c > mike.c
 ccomp: mike
-	ccomp -DHAVE_BLAKE2S -I.. -I ../wolfssl/wolfcrypt mike.c -o mike.out && ./mike.out
+	ccomp -DHAVE_BLAKE2B -DHAVE_BLAKE2 -I.. -I ../wolfssl/wolfcrypt mike.c -o mike.out && ./mike.out
 i: mike
-	ccomp -interp -quiet -DHAVE_BLAKE2S -I.. -I ../wolfssl/wolfcrypt mike.c
+	ccomp -interp -quiet -DHAVE_BLAKE2B -DHAVE_BLAKE2 -I.. -I ../wolfssl/wolfcrypt mike.c
 c:
-	rm -rf *.o *.out
+	rm -rf *.o *.out mike.c
 
 # tis-interpreter.sh --cc "-DHAVE_BLAKE2B -DHAVE_BLAKE2 -DSINGLE_THREADED -I. -I wolfssl/wolfcrypt" blake2b/*.c
