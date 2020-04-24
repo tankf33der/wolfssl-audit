@@ -4,27 +4,18 @@
 #include <string.h>
 
 
-void *
-memset(void *s, int c, size_t n)
-{
-/*
-    if (__n != 0) {
-        char *d = __s;
+void *memset(void *dst, int c, size_t n)
+ {
+     if (n) {
+         char *d = dst;
+ 
+         do {
+             *d++ = c;
+         } while (--n);
+     }
+     return dst;
+ }
 
-        do {
-            *d++ = __c;
-        } while (--__n != 0);
-    }
-    return (__s);
-*/
-    unsigned int index;
-    unsigned char *memory = s, value = c;
-
-    for (index = 0; index < n; index++)
-        memory[index] = value;
-
-    return (memory);
-}
 void *memcpy(void *__restrict __dest, const void *__restrict __src, size_t __n)
 {
    char *csrc = (char *)__src;
